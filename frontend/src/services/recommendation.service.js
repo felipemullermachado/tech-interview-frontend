@@ -1,12 +1,56 @@
-// getRecommendations.js
-
 const getRecommendations = (
-  formData = { selectedPreferences: [], selectedFeatures: [] },
+  formData = {
+    selectedPreferences: [],
+    selectedFeatures: [],
+    selectedRecommendationType: '',
+  },
   products
 ) => {
-  /**
-   * Crie aqui a lógica para retornar os produtos recomendados.
-   */
+  const {
+    selectedPreferences = [],
+    selectedFeatures = [],
+    selectedRecommendationType = [],
+  } = formData;
+
+  // Complexidade
+  // O(n * m^2), onde n é o número de produtos, e m é o número de features ou preferences selecionadas
+  // Se m for pequeno, a complexidade é O(n)
+
+  const rankedProducts = products
+    .map((product) => ({
+      ...product,
+      rank:
+        product.features.filter((feature) => selectedFeatures.includes(feature))
+          .length +
+        product.preferences.filter((preference) =>
+          selectedPreferences.includes(preference)
+        ).length,
+    }))
+    .filter(({ rank }) => rank);
+
+  // Complexidade
+  // O(n*log(n))
+
+  const recommendations = rankedProducts.sort((a, b) => {
+    if (a.rank < b.rank) {
+      return 1;
+    } else if (a.rank > b.rank) {
+      return -1;
+    } else {
+      if (a.id < b.id) {
+        return 1;
+      } else if (a.id > b.id) {
+        return -1;
+      }
+      return 0;
+    }
+  });
+
+  if (selectedRecommendationType === 'SingleProduct') {
+    return recommendations.slice(0, 1);
+  } else {
+    return recommendations;
+  }
 };
 
 export default { getRecommendations };
