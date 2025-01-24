@@ -1,6 +1,7 @@
-import React from 'react';
-
-function RecommendationList({ recommendations }) {
+import React, { useContext } from 'react';
+import { RecommendationContext } from '../../context/RecommendationContext';
+function RecommendationList() {
+  const { recommendations } = useContext(RecommendationContext);
   return (
     <div>
       <h2 className="text-lg font-bold mb-4">Lista de Recomendações:</h2>
