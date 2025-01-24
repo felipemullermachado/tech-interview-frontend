@@ -1,3 +1,13 @@
+/**
+ * Get product recommendations based on selected preferences, features, and recommendation type.
+ *
+ * @param {Object} formData - The form data containing selected preferences, features, and recommendation type.
+ * @param {Array} formData.selectedPreferences - The selected preferences.
+ * @param {Array} formData.selectedFeatures - The selected features.
+ * @param {string} formData.selectedRecommendationType - The type of recommendation ('SingleProduct' or other).
+ * @param {Array} products - The list of products to rank and recommend.
+ * @returns {Array} The list of recommended products, sorted by rank and id.
+ */
 const getRecommendations = (
   formData = {
     selectedPreferences: [],

@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react';
 import getProducts from '../services/product.service';
 
+/**
+ * Custom hook to fetch and manage products, preferences, and features.
+ *
+ * @returns {Object} An object containing preferences, features, and products.
+ * @property {Array} preferences - A list of randomly selected preferences from the products.
+ * @property {Array} features - A list of randomly selected features from the products.
+ * @property {Array} products - A list of all fetched products.
+ */
 const useProducts = () => {
   const [preferences, setPreferences] = useState([]);
   const [features, setFeatures] = useState([]);
