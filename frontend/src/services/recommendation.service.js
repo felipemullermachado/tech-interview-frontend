@@ -41,6 +41,9 @@ const getRecommendations = (
   // Complexidade
   // O(n*log(n))
 
+  // A lista recommendations é ordenada de forma decrescente pelo rank e,
+  // em caso de empate, pelo maior ID de produto.
+
   const recommendations = rankedProducts.sort((a, b) => {
     if (a.rank < b.rank) {
       return 1;
