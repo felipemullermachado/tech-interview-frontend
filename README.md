@@ -20,12 +20,6 @@ Este projeto utiliza as seguintes tecnologias principais:
 - json-server: Para simular um servidor RESTful com dados de produtos
 - Tailwind CSS: Para estilização e layout responsivo
 
-## Requisitos Técnicos
-
-### Familiaridade com Tailwind CSS
-
-O layout da aplicação foi desenvolvido utilizando Tailwind CSS. Familiaridade básica com este framework de CSS utilitário será útil para entender e potencialmente modificar o layout existente.
-
 ### Versão do Node.js
 
 Este projeto requer Node.js versão 18.3 ou superior. Se você não tem essa versão instalada, siga as instruções abaixo para instalá-la usando `n` ou `nvm`.
@@ -54,19 +48,6 @@ Para completar este teste, você deve concentrar-se principalmente em três arqu
 
 3. `recommendation.service.js`: Neste arquivo de serviço, você verá o comentário "Crie aqui a lógica para retornar os produtos recomendados." Implemente a lógica de negócios para determinar quais produtos devem ser recomendados com base nos critérios fornecidos.
 
-## Observações Adicionais
-
-- Sinta-se à vontade para implementar melhorias na cobertura de testes e no layout da aplicação, caso tenha tempo adicional.
-- O código existente serve como base para sua implementação. Concentre-se em desenvolver a funcionalidade de recomendação de produtos conforme especificado nos requisitos do projeto e nos arquivos mencionados acima.
-
-## Requisitos
-
-- Implementar a lógica de recomendação de produtos com base nas preferências do usuário.
-- Utilizar React.js para o desenvolvimento do front-end.
-- Consumir a API fornecida pelo json-server para obter os dados dos produtos.
-- Seguir as boas práticas de desenvolvimento e organização de código.
-- Implementar testes unitários para as funcionalidades desenvolvidas.
-
 ## Como Executar
 
 1. Clone o repositório: `git clone <URL_DO_REPOSITORIO>`
@@ -93,10 +74,10 @@ Para completar este teste, você deve concentrar-se principalmente em três arqu
 
 Certifique-se de que todos os critérios de aceite são atendidos durante o desenvolvimento do projeto.
 
-## Autor
+## Entre em contato
 
-Desenvolvido por [Seu Nome]
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
 
-## Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+- Email: felipemullermachado@gmail.com
+- LinkedIn: [Felipe Müller Machado](https://www.linkedin.com/in/felipemullermachado/)
+- Portfólio: https://www.felipemuller.com
